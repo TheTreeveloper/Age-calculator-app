@@ -38,11 +38,15 @@
 form {
   display: flex;
   gap: 2rem;
+  margin-bottom: 4rem;
 }
 
 input {
   width: 5rem;
   height: 3rem;
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 1.3rem;
 }
 
 label {
