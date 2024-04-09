@@ -22,8 +22,10 @@ export const Parameters = () => {
 export const LineBreak = () => {
     return (
         <>
-        <hr />
-        <img src="../public/images/icon-arrow.svg" alt="" />
+        <div className="linebreak">
+            <hr />
+            <img src="./public/images/icon-arrow.svg" alt="arrow down" className="arrow-icon"/>
+        </div>
         </>
     );
 }
