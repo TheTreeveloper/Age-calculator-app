@@ -18,3 +18,12 @@ export const Parameters = () => {
         </div>
     )
 }   
+
+export const LineBreak = () => {
+    return (
+        <>
+        <hr />
+        <img src="/public/images/icon-arrow.svg" alt="" />
+        </>
+    );
+}
