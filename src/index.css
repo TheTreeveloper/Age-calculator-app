@@ -16,3 +16,67 @@
   --Smokey-grey: hsl(0, 1%, 44%);
   --Off-black: hsl(0, 0%, 8%);
 }
+
+.App {
+  background-color: var(--Off-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Container */
+.container {
+  width: auto;
+  padding: 2.5rem 1.5rem;
+  background-color: var(--White);
+  border-radius: 2rem 2rem 5rem 2rem;
+} 
+
+/* Form */
+form {
+  display: flex;
+  gap: 2rem;
+}
+
+input {
+  width: 5rem;
+  height: 3rem;
+}
+
+label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--Smokey-grey);
+}
+
+
+/* Attribution */
+.attribution {
+  margin-top: 3rem;
+  color: var(--Off-black);
+  text-align: center;
+}
+
+.attribution p {
+  font-size: 1rem;
+  color: var(--Off-black);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--Off-black);
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.4rem;
+  font-size: 1.1rem;
+  color: var(--Purple) !important;
+}
+
+.attribution a:visited {
+  color: var(--Off-black);
+}
