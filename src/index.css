@@ -47,7 +47,14 @@ input {
   padding-left: 1rem;
   font-weight: 700;
   font-size: 1.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Light-grey);
 }
+
+::placeholder {
+  color: var(--Light-grey);
+}
+
 
 label {
   font-size: 0.8rem;
@@ -72,6 +79,17 @@ label {
   bottom: 1.7rem;
 }
 
+/* Calculator */
+.calculator p {
+  color: var(--Off-black);
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.calculator p span {
+  color: var(--Purple);
+}
 
 /* Attribution */
 .attribution {
