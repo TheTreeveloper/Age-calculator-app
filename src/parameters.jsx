@@ -23,7 +23,7 @@ export const LineBreak = () => {
     return (
         <>
         <hr />
-        <img src="/public/images/icon-arrow.svg" alt="" />
+        <img src="../public/images/icon-arrow.svg" alt="" />
         </>
     );
 }
