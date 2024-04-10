@@ -1,12 +1,10 @@
 import { Parameters } from "./parameters";
-import { LineBreak } from "./parameters";
 import { Calculator } from "./calculator";
 
 export const Container = () => {
     return (
         <div className="container">
             <Parameters/>
-            <LineBreak/>
             <Calculator/>
         </div>
     );
