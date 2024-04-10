@@ -1,6 +1,6 @@
 export const Parameters = () => {
     return (
-        <div>
+        <div className="form-container">
             <form action="">
                 <div className="day-input">
                 <label htmlFor="day"> Day</label><br />
@@ -15,6 +15,7 @@ export const Parameters = () => {
                 <input type="text" id="year" name="year" placeholder="YYYY"/>
                 </div>
             </form>
+            <p id="error">Must be a valid date</p>
         </div>
     )
 }   
@@ -24,7 +25,7 @@ export const LineBreak = () => {
         <>
         <div className="linebreak">
             <hr />
-            <img src="./public/images/icon-arrow.svg" alt="arrow down" className="arrow-icon"/>
+            <img src="./images/icon-arrow.svg" alt="arrow down" className="arrow-icon"/>
         </div>
         </>
     );
