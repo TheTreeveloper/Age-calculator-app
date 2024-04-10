@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export const Parameters = () => {
     const [day, setDay] = useState('');
@@ -6,6 +6,7 @@ export const Parameters = () => {
     const [year, setYear] = useState('');
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    // const [errorColor, setErrorColor] = useState('hsl(0, 1%, 44%)');
 
     const handleClick = () => {
         if (day === "" || month === "" || year === "") {
@@ -22,7 +23,7 @@ export const Parameters = () => {
         <div className="form-container">
             <form action="">
                 <div className="day-input">
-                <label htmlFor="day"> Day</label><br />
+                <label htmlFor="day" className={showError ? 'errorColorChange' : ''}> Day</label><br />
                 <input type="text" id="day" name="day" placeholder="DD" value={day} onChange={(e) => setDay(e.target.value)}/>
                 </div>
                 <div className="month-input">
@@ -34,9 +35,11 @@ export const Parameters = () => {
                 <input type="text" id="year" name="year" placeholder="YYYY" value={year} onChange={(e) => setYear(e.target.value)}/>
                 </div>
             </form>
-            {showError && <p id="error" className="error">{errorMessage}</p>}
-            {showError && <p id="error" className="errorMonth">{errorMessage}</p>}
-            {showError && <p id="error" className="errorYear">{errorMessage}</p>}
+            <div id="errorHandler">
+                {showError && <p id="error" className="error">{errorMessage}</p>}
+                {showError && <p id="error" className="errorMonth">{errorMessage}</p>}
+                {showError && <p id="error" className="errorYear">{errorMessage}</p>}
+            </div>
             <div className="linebreak">
             <hr />
                         <img src="./images/icon-arrow.svg" alt="arrow down" id="arrow-button" onClick={handleClick}/>
