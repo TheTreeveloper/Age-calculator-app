@@ -74,7 +74,7 @@ label {
   font-size: 0.6rem;
   font-style: italic;
   position: relative;
-  top: 0.2rem;
+  bottom: 3.6rem;
 }
 
 .errorMonth{
@@ -82,7 +82,7 @@ label {
   font-size: 0.6rem;
   font-style: italic;
   position: relative;
-  bottom: 0.7rem;
+  bottom: 4.5rem;
   left: 7rem;
 }
 
@@ -90,8 +90,8 @@ label {
   color: var(--Light-red);
   font-size: 0.6rem;
   font-style: italic;
-  position: absolute;
-  bottom: 1.6rem;
+  position: relative;
+  bottom: 5.4rem;
   left: 14rem;
 }
 
