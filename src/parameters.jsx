@@ -24,15 +24,33 @@ export const Parameters = () => {
             <form action="">
                 <div className="day-input">
                 <label htmlFor="day" className={showError ? 'errorColorChange' : ''}> Day</label><br />
-                <input type="text" id="day" name="day" placeholder="DD" value={day} onChange={(e) => setDay(e.target.value)}/>
+                <input type="text" 
+                id="day" 
+                name="day" 
+                placeholder="DD" 
+                className={showError ? 'errorBorderColor' : ''}
+                value={day} 
+                onChange={(e) => setDay(e.target.value)}/>
                 </div>
                 <div className="month-input">
-                <label htmlFor="month"> Month</label><br />
-                <input type="text" id="month" name="month" placeholder="MM" value={month} onChange={(e) => setMonth(e.target.value)}/>
+                <label htmlFor="month" className={showError ? 'errorColorChange' : ''}> Month</label><br />
+                <input type="text" 
+                id="month" 
+                name="month" 
+                placeholder="MM" 
+                className={showError ? 'errorBorderColor' : ''}
+                value={month} 
+                onChange={(e) => setMonth(e.target.value)}/>
                 </div>
                 <div className="year-input">
-                <label htmlFor="year"> Year</label><br />
-                <input type="text" id="year" name="year" placeholder="YYYY" value={year} onChange={(e) => setYear(e.target.value)}/>
+                <label htmlFor="year" className={showError ? 'errorColorChange' : ''}> Year</label><br />
+                <input type="text" 
+                id="year" 
+                name="year" 
+                placeholder="YYYY" 
+                className={showError ? 'errorBorderColor' : ''}
+                value={year} 
+                onChange={(e) => setYear(e.target.value)}/>
                 </div>
             </form>
             <div id="errorHandler">
