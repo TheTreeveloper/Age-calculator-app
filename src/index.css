@@ -83,7 +83,7 @@ label {
   position: relative;
 }
 
-.arrow-icon {
+#arrow-button {
   background-color: var(--Purple);
   padding: 1rem;
   border-radius: 50%;
