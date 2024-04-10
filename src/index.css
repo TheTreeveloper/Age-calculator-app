@@ -24,6 +24,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Container */
@@ -69,6 +70,10 @@ label {
   letter-spacing: 0.2rem;
 }
 
+/* Errors */
+#errorHandler {
+  position: relative;
+}
 .error {
   color: var(--Light-red);
   font-size: 0.6rem;
@@ -95,6 +100,14 @@ label {
   left: 14rem;
 }
 
+.errorColorChange {
+  color: var(--Light-red);
+}
+
+.errorBorderColor {
+  border-color: var(--Light-red);
+}
+
 /* LineBreaker */
 
 .linebreak {
@@ -110,6 +123,14 @@ label {
   left: 8rem;
   top: -1.5rem;
   z-index: 1;
+}
+
+#arrow-button:hover {
+  background-color: var(--Light-red);
+  cursor: pointer;
+  width: 3.8rem;
+  padding: 0.8rem;
+  box-shadow: 0px 10px 6px -3px rgba(0,0,0,0.1);
 }
 
 hr {
@@ -166,7 +187,7 @@ hr {
     width: 30rem;
     padding: 2.5rem 1.5rem;
     background-color: var(--White);
-    border-radius: 2rem 2rem 5rem 2rem;
+    border-radius: 1rem 1rem 8rem 1rem;
   } 
 
   form {
@@ -186,7 +207,7 @@ hr {
 
   .error {
     position: absolute;
-    top: 4.7rem;
+    bottom: 2rem;
   }
   
   .errorMonth{
