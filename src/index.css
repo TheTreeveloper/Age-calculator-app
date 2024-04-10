@@ -69,12 +69,30 @@ label {
   letter-spacing: 0.2rem;
 }
 
-#error {
+.error {
   color: var(--Light-red);
   font-size: 0.6rem;
   font-style: italic;
   position: relative;
-  bottom: 3.8rem;
+  top: 0.2rem;
+}
+
+.errorMonth{
+  color: var(--Light-red);
+  font-size: 0.6rem;
+  font-style: italic;
+  position: relative;
+  bottom: 0.7rem;
+  left: 7rem;
+}
+
+.errorYear {
+  color: var(--Light-red);
+  font-size: 0.6rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 1.6rem;
+  left: 14rem;
 }
 
 /* LineBreaker */
@@ -88,12 +106,22 @@ label {
   padding: 1rem;
   border-radius: 50%;
   width: 3.5rem;
-  position: relative;
+  position: absolute;
   left: 8rem;
-  bottom: 1.7rem;
+  top: -1.5rem;
+  z-index: 1;
+}
+
+hr {
+  border: 1px solid var(--Off-white);
+  width: 100%;
 }
 
 /* Calculator */
+.calculator {
+  margin-top: 4rem;
+}
+
 .calculator p {
   color: var(--Off-black);
   font-size: 3rem;
@@ -131,4 +159,53 @@ label {
 
 .attribution a:visited {
   color: var(--Off-black);
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 30rem;
+    padding: 2.5rem 1.5rem;
+    background-color: var(--White);
+    border-radius: 2rem 2rem 5rem 2rem;
+  } 
+
+  form {
+    margin-bottom: 3rem;
+  }
+
+  .calculator {
+    margin-top: 2rem;
+  }
+
+  #arrow-button {
+    position: absolute;
+    left: 23rem;
+    top: -1.5rem;
+    z-index: 1;
+  }
+
+  .error {
+    position: absolute;
+    top: 4.7rem;
+  }
+  
+  .errorMonth{
+    position: absolute;
+    bottom: 2rem;
+    left: 9rem;
+  }
+
+  .errorYear {
+    position: absolute;
+    bottom: 2rem;
+    left: 18rem;
+  }
+
+  input {
+    width: 7rem;
+  }
+  
+  hr {
+    width: 25rem;
+  }
 }
