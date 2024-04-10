@@ -10,7 +10,7 @@ export const Parameters = () => {
     const handleClick = () => {
         if (day === "" || month === "" || year === "") {
             setShowError(true);
-            setErrorMessage("This field is required.");
+            setErrorMessage("This field is required");
         } else {
             setShowError(false);
             setErrorMessage("");
