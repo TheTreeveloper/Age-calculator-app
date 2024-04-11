@@ -7,6 +7,14 @@ export const Parameters = () => {
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
+    const currentYear = new Date().getFullYear() - 1;
+    const currentMonth = new Date().getMonth() + 1;
+    const currentDay = new Date().getDate() + 1;
+    
+    const [ageInYears, setAgeInYears] = useState('- -');
+    const [ageInMonths, setAgeInMonths] = useState(0);
+    const [ageInDays, setAgeInDays] = useState(0);
+
     const handleClick = () => {
         if (day === "" || month === "" || year === "") {
             setShowError(true);
@@ -56,6 +64,29 @@ export const Parameters = () => {
         }
     }
 
+    useEffect(() => {
+        let birthYear = year;
+        let birthMonth = month;
+        let birthDay = day;
+        const ageInYears = currentYear - birthYear + " ";
+        const ageInMonths = () => {
+            if (birthMonth > currentMonth) {
+                return (ageInYears - 1);
+            } else if (birthMonth === currentMonth && birthDay > currentDay) {
+                return ageInYears - 1;
+            } else {
+                return currentMonth - birthMonth + " ";
+            }
+        };
+        const ageInDays = currentDay - birthDay + " ";
+
+        setAgeInYears(ageInYears);
+        setAgeInMonths(ageInMonths);
+        setAgeInDays(ageInDays);
+        
+        console.log(ageInMonths)
+    }, [year, month, day])
+    
     
 
     return (
@@ -103,6 +134,20 @@ export const Parameters = () => {
             <hr />
                         <img src="./images/icon-arrow.svg" alt="arrow down" id="arrow-button" onClick={handleClick}/>
             </div>
+
+        <div className="calculator">
+            <p><span>{ageInYears}</span>years</p>
+            <p><span>{ageInMonths}</span>months</p>
+            <p><span>{ageInDays}</span>days</p>
+        </div>
         </div>
     )
 }   
+
+
+// export const Calculator = () => {
+    
+//     return (
+       
+//     );
+// }
