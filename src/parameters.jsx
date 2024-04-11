@@ -6,7 +6,6 @@ export const Parameters = () => {
     const [year, setYear] = useState('');
     const [showError, setShowError] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-    // const [errorColor, setErrorColor] = useState('hsl(0, 1%, 44%)');
 
     const handleClick = () => {
         if (day === "" || month === "" || year === "") {
@@ -18,6 +17,46 @@ export const Parameters = () => {
         }
     }
 
+    const handleDayChange = (event) => {
+        const {value} = event.target;
+        setDay(value);
+
+        if (value > 31){
+            setShowError(true);
+            setErrorMessage("Must be a valid date");
+        } else {
+            setShowError(false);
+            setErrorMessage("");
+        }
+    }
+
+    const handleMonthChange = (event) => {
+        const {value} = event.target;
+        setMonth(value);
+
+        if (value > 12){
+            setShowError(true);
+            setErrorMessage("Must be a valid date");
+        } else {
+            setShowError(false);
+            setErrorMessage("");
+        }
+    }
+
+    const handleYearChange = (event) => {
+        const {value} = event.target;
+        setYear(value);
+
+        if (value > 2024){
+            setShowError(true);
+            setErrorMessage("Must be a valid date");
+        } else {
+            setShowError(false);
+            setErrorMessage("");
+        }
+    }
+
+    
 
     return (
         <div className="form-container">
@@ -30,7 +69,9 @@ export const Parameters = () => {
                 placeholder="DD" 
                 className={showError ? 'errorBorderColor' : ''}
                 value={day} 
-                onChange={(e) => setDay(e.target.value)}/>
+                onChange={handleDayChange}
+                // (e) => setDay(e.target.value)
+                />
                 </div>
                 <div className="month-input">
                 <label htmlFor="month" className={showError ? 'errorColorChange' : ''}> Month</label><br />
@@ -40,7 +81,7 @@ export const Parameters = () => {
                 placeholder="MM" 
                 className={showError ? 'errorBorderColor' : ''}
                 value={month} 
-                onChange={(e) => setMonth(e.target.value)}/>
+                onChange={handleMonthChange}/>
                 </div>
                 <div className="year-input">
                 <label htmlFor="year" className={showError ? 'errorColorChange' : ''}> Year</label><br />
@@ -50,13 +91,13 @@ export const Parameters = () => {
                 placeholder="YYYY" 
                 className={showError ? 'errorBorderColor' : ''}
                 value={year} 
-                onChange={(e) => setYear(e.target.value)}/>
+                onChange={handleYearChange}/>
                 </div>
             </form>
             <div id="errorHandler">
-                {showError && <p id="error" className="error">{errorMessage}</p>}
-                {showError && <p id="error" className="errorMonth">{errorMessage}</p>}
-                {showError && <p id="error" className="errorYear">{errorMessage}</p>}
+                {showError && <p id="errorDay" className="error">{errorMessage}</p>}
+                {showError && <p id="errorMonth" className="errorMonth">{errorMessage}</p>}
+                {showError && <p id="errorYear" className="errorYear">{errorMessage}</p>}
             </div>
             <div className="linebreak">
             <hr />
