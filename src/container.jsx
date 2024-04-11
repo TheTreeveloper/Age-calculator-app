@@ -1,11 +1,11 @@
 import { Parameters } from "./parameters";
-import { Calculator } from "./calculator";
+// import { Calculator } from "./parameters";
 
 export const Container = () => {
     return (
         <div className="container">
             <Parameters/>
-            <Calculator/>
+            
         </div>
     );
 }
