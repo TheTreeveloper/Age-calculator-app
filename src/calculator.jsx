@@ -1,9 +1,12 @@
-export const Calculator = () => {
-    return (
-        <div className="calculator">
-            <p><span>- -</span>years</p>
-            <p><span>- -</span>months</p>
-            <p><span>- -</span>days</p>
-        </div>
-    );
-}
+// import { Parameters } from "./parameters";
+
+// export const Calculator = () => {
+    
+//     return (
+//         <div className="calculator">
+//             <p><span>- -</span>years</p>
+//             <p><span>- -</span>months</p>
+//             <p><span>- -</span>days</p>
+//         </div>
+//     );
+// }
